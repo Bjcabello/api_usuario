@@ -1,12 +1,12 @@
 import express from "express";
-import  indexRoutes  from "./routes/index";
+import userRoutes from "./routes/userRoutes";
 
 const app = express();
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }));
 
-app.use('/api',indexRoutes);
+app.use("/api", userRoutes);
 
 const PORT = 3000;
 
